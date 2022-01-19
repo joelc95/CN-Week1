@@ -1,1 +1,0 @@
-console.log("All around the world".charAt(7).toUpperCase());
