@@ -47,9 +47,9 @@ let num = 5;
 // Challenge 4: Palindrome check
 console.log('-----CHALLENGE 4-----');
 
-let num2 = 1001;
+let num2 = 1002;
 
-function palindromeChecker(x) {
+let palindromeChecker = (x) => {
     let reversedX = Number(x.toString().split('').reverse().join(''));
 
     if (reversedX == x) {
