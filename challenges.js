@@ -13,12 +13,31 @@ if (password.length < 8) {
 console.log('-----CHALLENGE 2-----');
 let digit = 2;
 
-if (digit % 3 == 0 || digit % 5 == 0) {
-    console.log(`${digit} is divisible by 3 or 5!`);
+if (digit % 3 == 0 && digit % 5 == 0) {
+    console.log(`${digit} is divisible by BOTH 3 and 5!`);
+} else if (digit % 3 == 0) {
+    console.log(`${digit} is divisible by 3!`);
+} else if (digit % 5 == 0) {
+    console.log(`${digit} is divisible by 5!`);
 } else {
     console.log(`${digit} is NOT divisible by 3 or 5!!`);
 }
 
+// SWITCH VERSION
+switch(true) {
+    case digit % 3 == 0 && digit % 5 == 0:
+        console.log(`${digit} is divisible by BOTH 3 and 5!`);
+        break;
+    case (digit % 3 == 0):
+        console.log(`${digit} is divisible by 3!`);
+        break;
+    case (digit % 5 == 0):
+        console.log(`${digit} is divisible by 5!`);
+        break;
+    default:
+        console.log(`${digit} is NOT divisible by 3 or 5!`);
+        break; 
+}
 // Challenge 3: FizzBuzz ternary
 console.log('-----CHALLENGE 3-----');
 let num = 5;
